@@ -1,14 +1,10 @@
-import { useState } from "react";
-
 interface RouteProps {
   path: string;
-  element: React.ReactNode;
+  element: JSX.Element;
 }
 
-function Route({ path, element }: RouteProps) {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
-  return <>{currentPath === path ? element : null}</>;
+function Route({ element }: RouteProps) {
+  return <>{element}</>;
 }
 
 export default Route;

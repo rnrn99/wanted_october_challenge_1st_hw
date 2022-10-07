@@ -1,10 +1,9 @@
-import React from "react";
+export const useRouter = () => {
+  const push = (path: string) => {
+    history.pushState(null, "", path);
 
-function useRouter() {
-  const push = () => {
-    console.log("push");
+    const navigate = new PopStateEvent("popstate");
+    window.dispatchEvent(navigate);
   };
   return { push };
-}
-
-export default useRouter;
+};
