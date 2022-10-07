@@ -1,12 +1,10 @@
-import "./App.css";
-
-function App() {
+function Root() {
   return (
-    <div className="App">
+    <div>
       <h1>Root Page!</h1>
       <button>Go to About Page</button>
     </div>
   );
 }
 
-export default App;
+export default Root;
